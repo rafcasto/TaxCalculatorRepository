@@ -6,6 +6,9 @@ import org.springframework.stereotype.Component;
 public class TaxCalculatorComponentImpl implements TaxCalculatorComponent{
     @Override
     public double calculateTax(double annualIncome) {
-        return 0;
+        if(annualIncome < 1000){
+            return 0;
+        }
+        return annualIncome * (10.5 / 100);
     }
 }

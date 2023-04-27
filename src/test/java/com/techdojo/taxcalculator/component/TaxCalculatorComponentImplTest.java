@@ -22,7 +22,7 @@ public class TaxCalculatorComponentImplTest {
     @Test
     void taxBracketAisAppliedWhenIncomeIsBellow14k() {
         double income = 14000.00;
-        double actualTaxToPay =  taxCalculatorComponent.calculateTax(120.00);
+        double actualTaxToPay =  taxCalculatorComponent.calculateTax(income);
         double expectedTaxToPay = income * (10.5 / 100);
         Assertions.assertEquals(expectedTaxToPay,actualTaxToPay,"Amount is not as expected ");
     }
